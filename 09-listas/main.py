@@ -27,14 +27,40 @@ print(cantantes)
 
 #Recorrer listas
 
-nueva_pelicula = ""
-while nueva_pelicula != "parar":
-    nueva_pelicula = input("Introducir nombre de pelicula: ")
-    if nueva_pelicula != "parar":
-        peliculas.append(nueva_pelicula)
+# nueva_pelicula = ""
+# while nueva_pelicula != "parar":
+#     nueva_pelicula = input("Introducir nombre de pelicula: ")
+#     if nueva_pelicula != "parar":
+#         peliculas.append(nueva_pelicula)
 
 
-for pelicula in peliculas:
-    print(f"{peliculas.index(pelicula) + 1}. {pelicula}")
+# for pelicula in peliculas:
+#     print(f"{peliculas.index(pelicula) + 1}. {pelicula}")
 
 #Listas multidimensionales
+
+contactos = [
+    [
+        'Antonio',
+        'antonio.com'
+    ],
+    [
+        'Luis',
+        'luis.com'
+    ],
+    [
+        'Salvador',
+        'salvador.com'
+    ]
+]
+
+print(contactos[1][1])
+print(contactos)
+for contacto in contactos:
+    for elemento in contacto:
+        if contacto.index(elemento) == 0:
+            print(f"Nombre: {elemento}")
+        else:
+            print(f"Email: {elemento}")
+    print("\n")
+     
