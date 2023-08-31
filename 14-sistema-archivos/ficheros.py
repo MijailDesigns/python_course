@@ -35,8 +35,15 @@ for elem in lista:
      print("- "+elem.center(50))
 
 #Copiar archivos
-ruta_original = str(pathlib.Path().absolute()) + "/fichero_texto.txt"
-ruta_nueva = str(pathlib.Path().absolute()) + "/fichero_copiado.txt"
-ruta_alternativa = str(pathlib.Path().absolute()) + "/../07-ejercicios/fichero_copiado88.txt"
+# ruta_original = str(pathlib.Path().absolute()) + "/fichero_texto.txt"
+# ruta_nueva = str(pathlib.Path().absolute()) + "/fichero_copiado.txt"
+# ruta_alternativa = str(pathlib.Path().absolute()) + "/../07-ejercicios/fichero_copiado88.txt"
 
-shutil.copyfile(ruta_original, ruta_nueva)
+# shutil.copyfile(ruta_original, ruta_nueva)
+
+#Mover
+
+ruta_original = str(pathlib.Path().absolute()) + "/fichero_copiado.txt"
+ruta_nueva = str(pathlib.Path().absolute()) + "/fichero_copiado_NUEVO.txt"
+
+shutil.move(ruta_original, ruta_nueva)
