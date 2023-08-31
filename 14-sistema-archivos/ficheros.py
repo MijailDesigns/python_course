@@ -43,7 +43,25 @@ for elem in lista:
 
 #Mover
 
-ruta_original = str(pathlib.Path().absolute()) + "/fichero_copiado.txt"
-ruta_nueva = str(pathlib.Path().absolute()) + "/fichero_copiado_NUEVO.txt"
+# ruta_original = str(pathlib.Path().absolute()) + "/fichero_copiado.txt"
+# ruta_nueva = str(pathlib.Path().absolute()) + "/fichero_copiado_NUEVO.txt"
 
-shutil.move(ruta_original, ruta_nueva)
+# shutil.move(ruta_original, ruta_nueva)
+
+#Eliminar
+import os
+
+ruta_nueva = str(pathlib.Path().absolute()) + "/fichero_copiado_NUEVO.txt"
+#os.remove(ruta_nueva)
+
+#Comprobar si existe archivo
+import os.path
+print(os.path.abspath("./"))
+ruta_comprobar = os.path.abspath("./") + "/fichero_texto2.txt"
+ruta_comprobar = "./ficheros.py"
+
+if os.path.isfile(ruta_comprobar):
+    print("El archivo existe")
+else:
+    print("El archivo no existe")
+
