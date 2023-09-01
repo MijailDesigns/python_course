@@ -10,5 +10,8 @@ numeros.sort()
 print(numeros)
 print(len(numeros))
 
-numero_to_search = int(input("INtroduce el numero a buscar: "))
-print(f"El numero {numero_to_search} se encuentra en el indice {numeros.index(numero_to_search)}")
+try:
+    numero_to_search = int(input("INtroduce el numero a buscar: "))
+    print(f"El numero {numero_to_search} se encuentra en el indice {numeros.index(numero_to_search)}")
+except:
+    print("El numero no esta en la lista, lo siento")
